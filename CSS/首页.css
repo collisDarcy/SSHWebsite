@@ -1,0 +1,639 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Mircrosoft Yahei",
+    STXihei, hei;
+  color: #000;
+  background: #f2f2f2;
+  overflow-x: index;
+  -webkit-tap-highlight-color: transparent;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+div {
+  box-sizing: border-box;
+}
+.container {
+  max-width: 640px;
+  /* height: 100%; */
+  height: 50px;
+  margin: 0 auto;
+  background-color: #f8f8f8;
+}
+/* .notice-pic {
+  float: left;
+  width: 100px;
+  height: 40px;
+  /* background-color: sandybrown; */
+
+.notice-text {
+  /* margin-left: 100px; */
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  font-family: "kaiti";
+  font-weight: 600;
+  color: cyan;
+  /* background-color: pink; */
+  /* background-color: red; */
+  overflow: hidden;
+}
+.notice-info {
+  width: 200%;
+  position: relative;
+  /* background-color: pink; */
+  animation: gonggao 4s linear infinite;
+}
+.notice-info p {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  /* background-color: red; */
+  background: -webkit-linear-gradient(left, #ff506c, #ff6bc6);
+}
+.notice-info p:first-child {
+  left: 0;
+}
+.notice-info p:last-child {
+  left: 50%;
+}
+
+@keyframes gonggao {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+/* 搜索模块 */
+.search-index {
+  /* 固定定位和父级没有关系，它以屏幕为准; */
+  display: flex;
+  position: relative;
+  top: 30px;
+  margin-top: -30px;
+  left: 50%;
+
+  /* 固定的盒子应该有宽度 */
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100%;
+  min-width: 320px;
+  max-width: 540px;
+  height: 44px;
+  background-color: #f6f6f6;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+.search {
+  position: relative;
+  height: 26px;
+  line-height: 24px;
+  border: 1px solid cyan;
+  flex: 1;
+  font-size: 12px;
+  color: grey;
+  margin: 7px 10px;
+  padding-left: 50px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+.search::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 15px;
+  height: 15px;
+  background: url(../images/sprite.png) no-repeat -59px -279px;
+  background-size: 104px auto;
+  z-index: 999;
+}
+
+.user {
+  width: 44px;
+  height: 44px;
+  /* background-color: purple; */
+  font-size: 12px;
+  text-align: center;
+  color: #2eaae0;
+}
+
+.user::before {
+  content: "";
+  display: block;
+  width: 23px;
+  height: 23px;
+  /* margin-left: -80px; */
+  /* margin-top: -100px; */
+  background: url(../images/sprite.png) no-repeat -59px -194px;
+  background-size: 104px auto;
+  margin: 4px auto -2px;
+}
+
+/* focus */
+
+.focus {
+  padding-top: 44px;
+}
+
+.focus img {
+  /* position:absolute; */
+  /* position: fixed; */
+  /* height: 10%; */
+  width: 100%;
+  /* height: 300px; */
+}
+/* local-nav */
+
+.local-nav {
+  display: flex;
+  height: 64px;
+  margin: 3px 4px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.local-nav li {
+  flex: 1;
+}
+
+.local-nav a {
+  display: flex;
+  flex-direction: column;
+  /* 侧轴居中对齐 因为是单行 */
+  align-items: center;
+  font-size: 12px;
+}
+
+.local-nav li [class^="local-nav-icon"] {
+  width: 32px;
+  height: 32px;
+  background-color: pink;
+  margin-top: 8px;
+  background: url(../images/localnav_bg.png) no-repeat 0 0;
+  background-size: 32px auto;
+}
+
+.local-nav li .local-nav-icon-icon2 {
+  background-position: 0 -32px;
+}
+
+.local-nav li .local-nav-icon-icon3 {
+  width: 43px;
+  height: 32px;
+  background: url(../images/subnav-bg.png) no-repeat 0 0;
+  background-position: -1px -175px;
+}
+
+.local-nav li .local-nav-icon-icon4 {
+  background-position: 0 -96px;
+}
+
+.local-nav li .local-nav-icon-icon5 {
+  background-position: 0 -128px;
+}
+
+.pho-box {
+  position: relative;
+  border-top: 1px solid #bbb;
+  background-color: #fff;
+  margin: 4px;
+}
+/* 子是绝对定位-absloute */
+/* 父亲是相对定位-relative */
+.ann-box {
+  position: relative;
+  height: 44px;
+  border-bottom: 1px solid #ccc;
+}
+
+.ann-box .box {
+  /* padding-top: -30px; */
+  /* position: absolute; */
+  top: 11px;
+  position: relative;
+  width: 89px;
+  height: 23px;
+  background: -webkit-linear-gradient(left, #ff506c, #ff6bc6);
+  border-radius: 15px;
+  padding: 3px 20px 3px 10px;
+  /* white-space: nowrap; */
+  /* color: #fff; */
+  /* font-size: 18px; */
+  /* color: grey; */
+  /* text-align: center; */
+  /* line-height: 44px; */
+  /* margin-top: 20px; */
+  /* position: relative; */
+  /* text-indent: -999px; */
+  /* overflow: hidden; */
+}
+.ann-box .box h2 {
+  position: absolute;
+  /* display: inline-block; */
+  font-size: 16px;
+  font-family: kaiti;
+  color: #fff;
+  margin-top: -13px;
+  /* margin-left: -10px; */
+  white-space: nowrap;
+  text-align: center;
+  line-height: 44px;
+  /* 文字强制性转换为一行 */
+}
+/* .ann-box h2 ::after {
+  position: absolute;
+  top: 100px;
+  left: 0px;
+  content: "";
+} */
+/* .ann-box h2::after {
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  content: "";
+  width: 79px;
+  height: 15px; */
+/* background: url(../images/hot.png) no-repeat 0 -20px; */
+/* background-size: 79px auto; */
+/* } */
+
+.pho {
+  position: absolute;
+  right: 1px;
+  top: 8px;
+  background: -webkit-linear-gradient(left, #ff506c, #ff6bc6);
+  border-radius: 15px;
+  padding: 3px 20px 3px 10px;
+  font-family: kaiti;
+  color: #fff;
+}
+
+.pho::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  width: 7px;
+  height: 7px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(45deg);
+}
+.pho-bd {
+  display: flex;
+  /* justify-content: space-between; */
+}
+.pho-bd row1 {
+  flex: 2;
+  /* justify-content: space-between; */
+  border: 1px solid pink;
+}
+.pho-bd row2 {
+  flex: 1;
+  border: 1px solid cyan;
+}
+/* 爱情宣言模块 */
+/* .row1 {
+  padding: 0 40px;
+} */
+.row1 ul li {
+  padding: 2px 0;
+  /* border-bottom: 1px dotted gold; */
+}
+.row1 ul li h4 {
+  font-size: 10px;
+  font-family: kaiti;
+  color: #e4d9d9dc;
+}
+.row1 ul li p {
+  font-size: 14px;
+  font-family: kaiti;
+  font-weight: 600;
+}
+.row1 input {
+  float: left;
+  margin-top: 7px;
+  /* padding-left: 10px; */
+  margin-left: -2px;
+}
+.row1 .agree {
+  float: left;
+  display: block;
+  height: 38px;
+  /* border: 2px solid pink; */
+  text-align: center;
+  line-height: 38px;
+  color: pink;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: kaiti;
+  margin-top: 1px;
+  margin-left: 1px;
+  /* padding: -10px; */
+}
+/* .content .agree :hover {
+  color: red;
+  background-color: green;
+} */
+.row1 .agree:hover {
+  color: #eeeff8;
+}
+.row1 span img {
+  float: left;
+  width: 89px;
+  height: 78px;
+  margin-top: -75px;
+  margin-left: 116px;
+}
+.row2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  margin-top: 50px;
+  margin-right: -4px;
+  /* margin-right: 10px; */
+  width: 70%;
+  height: 150px;
+  overflow: hidden;
+  /* border: 2px solid red; */
+}
+.row2 ul {
+  width: 900%;
+  overflow: hidden;
+  margin-left: -100%;
+  /* 向左移动百分之百使得显示下一个图片 */
+  /* 清除浮动 */
+}
+.row2 ul li {
+  float: left;
+  width: 11.1%;
+}
+.row2 ul li img {
+  width: 100%;
+}
+.row2 ol {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 120px;
+  margin-right: 115px;
+}
+.row2 ol li {
+  display: inline-block;
+  list-style: none;
+  width: 5px;
+  height: 5px;
+  /* background-color: #ff6bc6; */
+  background-color: cyan;
+  border-radius: 5px;
+  transition: all 0.3s;
+  /* li添加过渡效果--transition */
+  /* border: 2px solid red; */
+}
+.row2 .current {
+  border: 1px solid #ff6bc6;
+  background-color: #ff6bc6;
+}
+/* .row2 {
+  width: 100%;
+  height: 100%;
+} */
+/* .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+/* display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  margin-left: -100px;
+  padding-left: -100px;
+  transition: 300ms;
+  transform: scale(0.8);
+} */
+/* .swiper-slide-active,
+.swiper-slide-duplicate-active {
+  transform: scale(1);
+} */
+/* .row2 img { */
+/* position: relative; */
+/* width: 200%; */
+/* flex: 1; */
+/* justify-content: space-between; */
+/* margin-left: -6px; */
+/* margin-top: 36px; */
+/* height: 441px; */
+/* background-color: pink; */
+/* background: url(./imags/照片/图层0.png) ; */
+/* margin: 0 100px; */
+/* } */
+/* .swiper-container {
+  width: 80%;
+  /* margin-top: -100px; */
+/* padding-top: 50px; */
+/* padding-bottom: 50px; */
+/* } */
+/* .swiper-slide { */
+/* background-position: center; */
+/* background-size: cover; */
+/* width: 300px; */
+/* height: 300px; */
+/* } */
+
+/* 结尾 */
+
+.banner {
+  position: fixed;
+  width: 100%;
+  height: 175px;
+  left: 0;
+  bottom: 0;
+  z-index: 99;
+  -webkit-transition: all 3.2s ease;
+  -moz-transition: all 3.2s ease;
+  -ms-transition: all 3.2s ease;
+  transition: all 3.2s ease;
+}
+
+.walk01 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 154px;
+  height: 100px;
+  opacity: 0;
+  -webkit-animation: move01 15s linear infinite;
+  -moz-animation: move01 15s linear infinite;
+  -ms-animation: move01 15s linear infinite;
+  animation: move01 15s linear infinite;
+}
+
+.west-01 {
+  width: 154px;
+  height: 99px;
+  background-image: url(../images/txgc_6d0e9e5.png);
+  background-repeat: no-repeat;
+  -webkit-animation: play01 0.4s steps(2) infinite;
+  -moz-animation: play01 0.4s steps(2) infinite;
+  -ms-animation: play01 0.4s steps(2) infinite;
+  animation: play01 0.4s steps(2) infinite;
+}
+
+@keyframes move01 {
+  0% {
+    -webkit-transform: translate(-200px, 0);
+    -moz-transform: translate(-200px, 0);
+    -ms-transform: translate(-200px, 0);
+    transform: translate(-200px, 0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(1920px, 0);
+    -moz-transform: translate(1920px, 0);
+    -ms-transform: translate(1920px, 0);
+    transform: translate(1920px, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes play01 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -308px 0;
+  }
+}
+
+.walk02 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 167px;
+  height: 136px;
+  opacity: 0;
+  -webkit-animation: move01 15s linear 2s infinite;
+  -moz-animation: move01 15s linear 2s infinite;
+  -ms-animation: move01 15s linear 2s infinite;
+  animation: move01 15s linear 2s infinite;
+}
+
+.west-02 {
+  width: 167px;
+  height: 136px;
+  background-image: url(../images/txgh_fee2457.png);
+  background-repeat: no-repeat;
+  -webkit-animation: play02 0.4s steps(2) infinite;
+  -moz-animation: play02 0.4s steps(2) infinite;
+  -ms-animation: play02 0.4s steps(2) infinite;
+  animation: play02 0.4s steps(2) infinite;
+}
+
+@keyframes play02 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -334px 0;
+  }
+}
+
+.walk03 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 161px;
+  height: 119px;
+  opacity: 0;
+  -webkit-animation: move01 15s linear 4s infinite;
+  -moz-animation: move01 15s linear 4s infinite;
+  -ms-animation: move01 15s linear 4s infinite;
+  animation: move01 15s linear 4s infinite;
+}
+
+.west-03 {
+  width: 161px;
+  height: 119px;
+  background-image: url(../images/txgl_c15cfd8.png);
+  background-repeat: no-repeat;
+  -webkit-animation: play03 0.4s steps(2) infinite;
+  -moz-animation: play03 0.4s steps(2) infinite;
+  -ms-animation: play03 0.4s steps(2) infinite;
+  animation: play03 0.4s steps(2) infinite;
+}
+
+@keyframes play03 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -322px 0;
+  }
+}
+
+.walk04 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 171px;
+  height: 117px;
+  opacity: 0;
+  -webkit-animation: move01 15s linear 6s infinite;
+  -moz-animation: move01 15s linear 6s infinite;
+  -ms-animation: move01 15s linear 6s infinite;
+  animation: move01 15s linear 6s infinite;
+}
+
+.west-04 {
+  width: 171px;
+  height: 117px;
+  background-image: url(../images/txgq_d281c9b.png);
+  background-repeat: no-repeat;
+  -webkit-animation: play04 0.4s steps(2) infinite;
+  -moz-animation: play04 0.4s steps(2) infinite;
+  -ms-animation: play04 0.4s steps(2) infinite;
+  animation: play04 0.4s steps(2) infinite;
+}
+
+@keyframes play04 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -342px 0;
+  }
+}

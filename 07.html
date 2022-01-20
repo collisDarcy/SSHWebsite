@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2021/5/1</title>
+ 
+<style>
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	img{
+		width:200px;
+		height: 300px;
+	}
+	/* body{ background-color:#fcbdf7; }   */
+        body{
+            background-image: url(./images/动图/背影.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%100%;
+            background-attachment: fixed;
+        }
+/* <!--设置动画效果--> */
+	/* @-webkit-keyframes  */
+    @keyframes move{
+        /* @-webkit-关键帧动画边框 */
+		0% {transform:rotateX(-15deg) rotateY(0deg);} /*起始*/   
+		100%{transform:rotateX(-15deg) rotateY(360deg);} /*结束*/
+	}
+/* <!--设置box的属性，动画效果定义等--> */
+	.box{				
+		width:200px;
+		height:300px;
+		position:relative;
+		margin:auto;
+		margin-top:120px;
+		transform-style:preserve-3d;
+		transform:rotateX(-10deg);
+		animation:move 4s;  
+		animation-iteration-count: infinite;   
+		animation-timing-function: linear;    
+		position: relative   
+	}
+/* *******<!--鼠标移动到图片，停止旋转--> */
+	.box:hover{
+		animation-play-state: paused;
+	}
+/* <!--设置图片div的属性--> */
+	.box div{
+		width:200px;
+		height:300px;
+		position: absolute;
+		left:0;
+		top:0;
+		
+	}
+</style>
+ 
+</head>
+<body>
+	<div align="center"> <h2><font size="6" color="pink">陪伴我的第二个生日</font></h2>
+ 
+<!--设置图片的div属性-->
+<div class="box">
+	<div style="transform: rotateY(0deg) translateZ(275px);">
+		<img src="./images/520表白资料/第六次见面_5/01.jpeg" >
+	</div>
+	<div style="transform: rotateY(40deg) translateZ(275px);">
+		<img src="./images/520表白资料/第六次见面_5/02.jpeg">
+	</div>
+	<div style="transform: rotateY(80deg) translateZ(275px);">
+		<img src="./images/520表白资料/第六次见面_5/03.jpeg">
+	</div>
+	<div style="transform: rotateY(120deg) translateZ(275px);">
+		<img src="./images/520表白资料/第六次见面_5/04.jpeg">
+	</div>
+	<div style="transform: rotateY(160deg) translateZ(275px);">
+		<img src="./images/520表白资料/第六次见面_5/05.jpeg">
+	</div>
+	<div style="transform: rotateY(200deg) translateZ(275px);">
+		<img src="./520表白资料/第六次见面_5/06.jpeg">
+	</div>
+	<div style="transform: rotateY(240deg) translateZ(275px);">
+		<img src="./images/520表白资料/第六次见面_5/07.jpeg">
+	</div>
+	<div style="transform: rotateY(280deg) translateZ(275px);">
+		<img src="./imags/520表白资料/第六次见面_5/08.jpeg">
+	</div>
+	<div style="transform: rotateY(320deg) translateZ(275px);">
+		<img src="./images/520表白资料/第六次见面_5/09.jpeg" >
+	</div>		
+	<div style="transform: rotateY(360deg) translateZ(275px);">
+		<img src="./imags/520表白资料/第六次见面_5/10.jpeg" >
+	</div>	
+	<div style="transform: rotateY(400deg) translateZ(275px);">
+		<img src="./images/520表白资料/第六次见面_5/11.jpeg" >
+	</div>		
+	<div style="transform: rotateY(440deg) translateZ(275px);">
+		<img src="./images/520表白资料/第六次见面_5/12.jpeg" >
+	</div>		
+	<div style="transform: rotateY(480deg) translateZ(275px);">
+		<img src="./images/520表白资料/第六次见面_5/13.jpeg" >
+	</div>		
+	<div style="transform: rotateY(520deg) translateZ(275px);">
+		<img src="./images/520表白资料/第六次见面_5/14.jpeg" >
+	</div>		
+	<div style="transform: rotateY(560deg) translateZ(275px);">
+		<img src="./images/520表白资料/第六次见面_5/15.jpeg" >
+	</div>	
+	<div style="transform: rotateY(600deg) translateZ(275px);">
+		<img src="./images/520表白资料/第六次见面_5/16.jpeg" >
+	</div>		
+	<div style="transform: rotateY(640deg) translateZ(275px);">
+		<img src="./images/520表白资料/第六次见面_5/17.jpeg" >
+	</div>										
+</div>
+ 
+</body>
+</html>
+ 

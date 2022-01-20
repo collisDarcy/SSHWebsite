@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2020/8/14</title>
+   <!--<embed src="../图片/艾辰 - 错位时空.mp3" autostart="true" loop="true" hidden="true"></embed>--> 
+    <style type="text/css">
+         body {
+            /* background-color: #dcf5f5; */
+            background-image: url(./images/动图/06.jpg);
+        }
+    *{margin:0%;padding:0%;}
+        /* 这里设置的是照片墙 */
+    .wrap{width: 600px;height: 400px;margin: 200px auto;}
+    .box{width: 200px;height: 200px;margin: 100px auto;position: relative;transition: all 3s;transform-style: preserve-3d;animation:move 5s infinite linear alternate;}
+    .box>div{width: 200px;height: 200px;font-size: 60px;opacity: .5;position: absolute;top:0%;left:0%;transition: all 1s;}
+    .box img{width: 200px;height: 200px;}
+    .left{transform: rotateY(90deg) translateZ(-100px);}
+    .right{transform:rotateY(90deg) translateZ(100px);}
+    .top{transform:rotateX(90deg) translateZ(100px);}
+    .bottom{transform:rotateX(90deg) translateZ(-100px);}
+    .after{transform: translateZ(-100px);}
+    .before{transform: translateZ(100px);}
+    /* 通过rotateY使元素围绕Y轴旋转，translateZ拉开Z轴的距离，更有立体感
+    deg是旋转角度，px为平移距离
+    rotate(30deg) ：定义2D旋转，参数角度
+    rotateX()定义沿着X轴的3D旋转   正值:向后躺       负值:向前趴
+    rotateY()定义沿着Y轴的3D旋转    正值:向里转       负值:向外转
+    rotateZ()定义沿着Z轴的3D旋转
+    第一个参数表示横向斜切      第二个参数表示纵向斜切
+    移动：translateX()：定义对象x轴的平移
+    translateY()：定义对象Y轴的平移
+    translateZ()：定义对象Z轴的放大缩小，效果和scale相同 */
+       /* hover:鼠标点击这里，照片会显示出来 */
+    .wrap .box:hover .left{transform: rotateY(90deg) translateZ(-360px);}
+    
+    .wrap .box:hover .right{transform: rotateY(90deg) translateZ(460px);}
+    
+    .wrap .box:hover .top{transform: rotateX(90deg) translateZ(260px);}/*160*/
+    
+    .wrap .box:hover .bottom{transform: rotateX(90deg) translateZ(-260px);}
+    /* CSS伪元素::after用来创建一个伪元素，作为已选中元素的最后一个子元素。
+    通常会配合content属性来为该元素添加装饰内容。这个虚拟元素默认是行内元素。 */
+    
+    .wrap .box:hover .after{transform: translateZ(-360px);}
+    
+    .wrap .box:hover .before{transform: translateZ(260px);}
+    @keyframes move{
+        from{transform: rotateX(0deg) rotateY(0deg);}
+        to{transform: rotateX(13deg) rotateY(720deg);}
+    }
+    </style>
+    <!--<audio autoplay="autoplay" controls="controls" loop="loop" preload="auto"
+     src="../图片/艾辰 - 错位时空.mp3"></audio>--> 
+     <!-- <audio autoplay controls loop> -->
+        <!-- <source src="../图片/艾辰 - 错位时空.mp3" type="audio/ogg"> -->
+      <!-- (1)ogg全称是OGG Vorbis， 是一种音频压缩格式，类似于MP3等的音乐格式。 -->
+      <!-- (2)这种文件格式可以不断地进行大小和音质的改良，而不影响旧有的编码器或播放器。 -->
+       <!-- <source src="../图片/艾辰 - 错位时空.mp3" type="audio/mpeg">   -->
+      <!-- audio/mpeg就是描述 horse.mp3 这个文件中包含mpeg格式的音频 -->
+    <!-- </audio> -->
+    
+    </styly>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box">
+            <div class="left"><img src="./images/520表白资料/第二次见面_8/01.jpg" alt=""></div>
+            <div class="right"><img src="./images/520表白资料/第二次见面_8/02.jpg" alt=""></div>
+            <div class="top"><img src="./images/520表白资料/第二次见面_8/03.jpg" alt=""></div>
+            <div class="bottom"><img src="./images/520表白资料/第二次见面_8/04.jpg" alt=""></div>
+            <div class="after"><img src="./images/520表白资料/第二次见面_8/05.jpg" alt=""></div>
+            <div class="before"><img src="./images/520表白资料/第二次见面_8/06.jpg" alt=""></div>
+
+        </div>
+    </div>
+ <!-- <audio autoplay="autoplay" controls="controls" loop="loop" preload="auto"
+    src="../图片/艾辰 - 错位时空.mp3"></audio>--> -->
+    <!--<source src="../图片/艾辰 - 错位时空.mp3" >-->
+   
+
+</body>
+</html>
